@@ -1,8 +1,7 @@
 # Readme aThaanaUtils
 
 Set of utilities to make thaana related schennanigans easier on android.
-Right has some minor code segments that make it support only 17+ however,
-can make it go lower up to 14+ with some minor changes. toDO:
+should support android 14+.
 
 ## usage
 
