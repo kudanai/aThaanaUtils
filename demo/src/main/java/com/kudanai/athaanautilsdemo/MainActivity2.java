@@ -1,5 +1,6 @@
 package com.kudanai.athaanautilsdemo;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -26,7 +27,9 @@ public class MainActivity2 extends ActionBarActivity
         setContentView(R.layout.activity_main_activity2);
 
         //flip the whole thing to RTL
-        getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
 
         //how to set a custom view in the actionbar to show thaana
         getSupportActionBar().setDisplayShowCustomEnabled(true);
