@@ -31,6 +31,7 @@ public class MainActivity2 extends ActionBarActivity
             getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         }
 
+
         //how to set a custom view in the actionbar to show thaana
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.top);

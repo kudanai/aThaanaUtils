@@ -28,7 +28,7 @@ public class TypefaceManager {
      * Do not instantiate directly, for performance reasons.
      * @return singleton instance of TypefaceManager
      */
-    public static TypefaceManager getInstance(){
+    public synchronized static TypefaceManager getInstance(){
         //lazy instantiation
         if(_instance==null)
             _instance = new TypefaceManager();
@@ -45,7 +45,7 @@ public class TypefaceManager {
      * @return a typeface instance
      * @throws java.io.IOException if the asset isn't found
      */
-    public Typeface getTypeface(String assetName, Context context) throws IOException {
+    public synchronized Typeface getTypeface(String assetName, Context context) throws IOException {
         if(_typefaces==null)
             _typefaces = new HashMap<String, Typeface>();
 
